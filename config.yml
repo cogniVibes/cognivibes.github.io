@@ -1,0 +1,77 @@
+baseURL : 'https://crypticcamel.github.io/'
+languageCode : 'en-us'
+theme : 'PaperMod'
+paginate: 5
+title : 'Cryptic Camel'
+description : 'Blog of Cryptic Camel'
+author : 'Ayush Saha'
+
+params:
+
+  label:
+    icon: cryptic-camel.jpg
+  env: production  
+  assets:
+      favicon: "favicon.ico"
+      favicon16x16: "favicon-16x16.png"
+      favicon32x32: "favicon-32x32.png"
+      apple_touch_icon: "apple-touch-icon.png"
+      android_chrome192x192: "android-chrome-192x192.png"
+      android_chrome512x512: "android-chrome-512x512.png"
+
+  # defaultTheme: light
+  # defaultTheme: dark
+  defaultTheme: auto # to switch between dark or light according to browser theme
+  disableThemeToggle: false
+
+  homeInfoParams:
+      Title: "Welcome! 👋"
+      Content: |
+        - Cryptic Camel is my personal website dedicated to all things programming, with a focus on the fascinating world of cryptography!
+        - ***- Ayush Saha***
+        -
+        - New post every time I upload 😉
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 2
+    keys: 
+      - title
+      - permalink
+      - summary
+      - content
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+
+menu:
+  main:
+    - name: Archive
+      url: archives/
+    - name: Tags
+      url: tags/
+    - name: Search
+      url: search/
