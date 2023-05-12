@@ -72,7 +72,7 @@ To make it easier to perform encryption and decryption, we can create a table th
 
 Another tool to make it easier to perform encryption or decryption in Caesar cipher is the Caeser wheel. The Caesar cipher wheel is a tool used for encryption and decryption in cryptography. It consists of a circular disk with the letters of the alphabet written around its circumference in a specific order. The disk can be rotated to any position, allowing the user to shift the letters a certain number of places to the right or left. To encrypt a message, each letter of the plaintext is replaced with the letter that is a certain number of positions to the right on the wheel. To decrypt the message, the process is reversed by shifting the letters to the left.
 
-![Caesar wheel](/posts/01/caesar-wheel.png)
+![Caesar wheel](/posts/01/caesar-wheel.png "Caesar Wheel")
 
 
 ## The Code
