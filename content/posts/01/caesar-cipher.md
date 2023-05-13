@@ -14,7 +14,7 @@ tags:
 
 ## Introduction
 
-Cryptography is the practice of secure communication in the presence of third parties. Throughout history, people have used various techniques to protect their messages, ranging from simple substitution ciphers to more advanced encryption methods. Caesar Cipher is a classical encryption method that will be discussed in this post. It is not used much nowadays as it is very easy to crack. However, it fulfils the purpose of teaching and and casual encryption where security is not the main concern. 
+Cryptography is the practice of secure communication in the presence of third parties. Throughout history, people have used various techniques to protect their messages, ranging from simple substitution ciphers to more advanced encryption methods. Caesar Cipher is a classical encryption method that will be discussed in this post. It is not used much nowadays as it is very easy to crack. However, it fulfils the purpose of teaching and casual encryption where security is not the main concern. 
 
 ## About Caesar Cipher
 
