@@ -69,8 +69,8 @@ To make it easier to perform encryption and decryption, we can create a table th
 {{< figure
   src="/posts/01/encryption-table.jpg"
   caption="Fig 1. Encryption Table"
-  height="80"
-  width="700"
+  height="60"
+  width="525"
   align="center"
 >}}
 
@@ -79,8 +79,8 @@ Another tool to make it easier to perform encryption or decryption in Caesar cip
 {{< figure
   src="/posts/01/caesar-wheel.jpg"
   caption="Fig 2. The Caesar Wheel"
-  height="400"
-  width="400"
+  height="300"
+  width="300"
   align="center"
 >}}
 
