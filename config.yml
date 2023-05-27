@@ -26,6 +26,9 @@ params:
 
   homeInfoParams:
       Title: "Welcome! 👋"
+      image:
+        url: ayush.png
+        title: Ayush
       Content: |
         - Cryptic Camel is my personal website dedicated to all things programming, with a focus on the fascinating world of cryptography!
         - ***- Ayush Saha***
