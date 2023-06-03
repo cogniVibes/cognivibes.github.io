@@ -83,7 +83,56 @@ It consists of a grid or matrix that provides a systematic way of encrypting and
 
 ## The Code
 
-The encryption-decryption script as well as the hacking script can be downloaded from [here](https://github.com/crypticCamel/vigenere-cipher)
+The encryption-decryption script as well as the hacking script can be downloaded from [here](https://github.com/crypticCamel/vigenere-cipher).
+
+
+Here is the source code of *encryption_decryption.py*:
+
+```python
+def vigenere_cipher(text, keyword, mode):
+    result = ""
+    keyword_length = len(keyword)
+    keyword = keyword.upper()
+    key_index = 0
+
+    for i, char in enumerate(text):
+        if char.isalpha():
+            ascii_offset = ord('A') if char.isupper() else ord('a')
+            keyword_shift = ord(keyword[key_index % keyword_length]) - ord('A')
+            
+            if mode == "decrypt":
+                keyword_shift = -keyword_shift  # Reverse the shift for decryption
+
+            char = chr((ord(char) - ascii_offset + keyword_shift) % 26 + ascii_offset)
+            key_index+=1
+        result += char
+
+    return result
+
+# Get mode
+while True:
+    print('Do you want to (e)ncrypt or (d)ecrypt?')
+    response = input('> ').lower()
+    if response.startswith('e'):
+        action = 'encrypt'
+        break
+    elif response.startswith('d'):
+        action = 'decrypt'
+        break
+    print('Please enter the letter e or d.')
+
+print("Enter the message.")
+message = input('> ')
+
+print("Enter the keyword.")
+keyword = input('> ').upper()
+
+# Perform encryption/decryption
+result = vigenere_cipher(message, keyword, action)
+
+# Display the result
+print(f"Result: {result}")
+```
 
 The vigenere_cipher function performs the encryption or decryption operation based on the provided parameters. It initializes an empty string called result to store the final result. It calculates the length of the keyword and converts it to uppercase.
 
@@ -99,8 +148,31 @@ Then, it asks the user to enter the message and keyword, storing them in the mes
 
 The vigenere_cipher function is called with the provided inputs (message, keyword, and action), and the result is stored in the result variable.
 
+### The Program in Action
+
+Here is a sample output that we get upon executing the program:
+
+```console
+Do you want to (e)ncrypt or (d)ecrypt?
+> e
+Enter the message.
+> Enemy is approaching! Send troops immediately!
+Enter the keyword.
+> Moonlight
+Result: Qbszj qy hibfcnnpouz! Esbq ezuvie wazplohmqzm!
+
+Do you want to (e)ncrypt or (d)ecrypt?
+> d
+Enter the message.
+> Qbszj qy hibfcnnpouz! Esbq ezuvie wazplohmqzm!
+Enter the keyword.
+> Moonlight
+Result: Enemy is approaching! Send troops immediately!
+```
+Here the key used is *Moonlight*.
+
 ## Conclusion
 
 There are several ways to hack the Vigenère Cipher, such as Kasiski examination, Friedman test, frequency analysis, dictionary attack, etc. However, these are advanced methods and require complex application of combinatorics and statistics. Discussing even one of those would require a separate post. For now we will focus on encryption and decryption. I will surely post a Vigenère hack tutorial in future.
 
-Note: Vigenère Cipher, although complex, is still too easy to break using modern methods and should not be used for serious encryption purposes.
+**Note:** Vigenère Cipher, although complex, is still too easy to break using modern methods and should not be used for serious encryption purposes.

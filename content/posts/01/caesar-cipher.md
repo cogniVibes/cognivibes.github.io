@@ -215,7 +215,7 @@ Note that code is nearly identical to the `caesar_cipher()` function of *encrypt
 
 Here is a sample output of the above code:
 
-```
+```console
 Enter the Caesar Cipher text
 > Pypxj td laaczlnstyr! Dpyo eczzad txxpotlepwj!
 Key: 0 | Decrypted message: Pypxj td laaczlnstyr! Dpyo eczzad txxpotlepwj!
