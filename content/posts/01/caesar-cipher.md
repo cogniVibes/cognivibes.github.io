@@ -1,4 +1,5 @@
 ---
+author: Ayush Saha
 title: "Hacking the Caesar Cipher"
 cover:
   image: "/posts/01/caesar.jpg"

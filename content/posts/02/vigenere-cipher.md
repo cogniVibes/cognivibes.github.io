@@ -1,4 +1,5 @@
 ---
+author: Ayush Saha
 title: "Understanding the Vigenère Cipher"
 cover:
   image: "/posts/02/vigenere.png"
