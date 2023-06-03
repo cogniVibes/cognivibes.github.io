@@ -47,7 +47,11 @@ Let's use the word "KEY" as the keyword and encrypt the plaintext message "HELLO
 First, we repeat the keyword "KEY" to match the length of the plaintext "HELLO". Thus, the repeated keyword becomes "KEYKE".
 
 The corresponding numerical representation of the plaintext message "HELLO" is: 
-$$H \rightarrow 7, \quad E \rightarrow 4, \quad L \rightarrow 11, \quad L \rightarrow 11, \quad O \rightarrow 14$$
+$$H \rightarrow 7\\\
+E \rightarrow 4\\\
+L \rightarrow 11\\\
+L \rightarrow 11\\\
+O \rightarrow 14$$
 
 Using the mathematical encryption formula $E_i = (p_i+k_j) \mod 26$, we can calculate the encrypted values as follows:
 $$E_1 = (7 + 10) \mod 26 = 17 \rightarrow R\\\
