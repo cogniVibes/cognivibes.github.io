@@ -7,10 +7,8 @@ summary: "Learn to encrypt or decrypt a Caesar Cipher or hack it"
 tags:
     - python
     - programming
-    - tutorial
+    - cryptography
 ---
-
-**Note:** Before we dive in, it's important to note that this guide is intended for beginners who want to improve their programming skills through practical projects. It's assumed that you have a basic understanding of Python, including various data types, working with variables, if-else conditionals, `for` and `while` loops, manipulating lists and dictionaries, and familiarity with built-in Python functions.
 
 ## Introduction
 
@@ -250,4 +248,4 @@ Key: 25 | Decrypted message: Qzqyk ue mbbdamotuzs! Eqzp fdaabe uyyqpumfqxk!
 
 ## Conclusion
 
-Previously, I mentioned that Caesar Cipher is not suitable for secure encryption purposes. This tutorial is intended for beginners who are interested in exploring the field of cryptography and want to enhance their programming skills. While there are numerous encryption methods available, Caesar Cipher is one of the most straightforward to understand. However, I will be posting more content in the future that discusses other types of ciphers in greater depth.
+Previously, I mentioned that Caesar Cipher is not suitable for serious encryption purposes. This post is intended for beginners who are interested in exploring the field of cryptography and want to enhance their programming skills. While there are numerous encryption methods available, Caesar Cipher is one of the most straightforward to understand. However, I will be posting more content in the future that discusses other types of ciphers in greater depth.
