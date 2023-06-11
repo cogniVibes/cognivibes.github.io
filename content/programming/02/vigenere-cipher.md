@@ -77,7 +77,7 @@ Thus, the decrypted message is "HELLO".
 Encryption/decryption in case of Vigenere Cipher is a tedious task. The Vigenère table, also known as the Vigenère square or the Tabula Recta, is used to simplify the process of encryption and decryption. 
 
 {{< figure
-  src="/posts/02/vigenere-table.png"
+  src="/programming/02/vigenere-table.png"
   caption="Fig 1. The Vigenère Table"
   height="400"
   width="400"
