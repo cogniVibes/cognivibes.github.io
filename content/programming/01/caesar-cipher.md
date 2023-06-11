@@ -2,7 +2,7 @@
 author: Ayush Saha
 title: "Hacking the Caesar Cipher"
 cover:
-  image: "/posts/01/caesar.jpg"
+  image: "/programming/01/caesar.jpg"
 date: 2023-05-12
 summary: "Learn to encrypt or decrypt a Caesar Cipher or hack it"
 tags:

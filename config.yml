@@ -25,16 +25,33 @@ params:
   defaultTheme: auto # to switch between dark or light according to browser theme
   disableThemeToggle: false
 
-  homeInfoParams:
-      Title: "Welcome! 👋"
-      image:
-        url: ayush.png
-        title: Ayush
-      Content: |
-        - Cryptic Camel is my personal website dedicated to all things programming, with a focus on the fascinating world of cryptography!
-        - ***- Ayush Saha***
-        -
-        - New post every time I upload 😉
+  # homeInfoParams:
+  #     Title: "Welcome! 👋"
+  #     image:
+  #       url: ayush.png
+  #       title: Ayush
+  #     Content: |
+  #       - Cryptic Camel is my personal website dedicated to all things programming, with a focus on the fascinating world of cryptography!
+  #       - ***- Ayush Saha***
+  #       -
+  #       - New post every time I upload 😉
+
+  profileMode:
+        enabled: true
+        title: "Welcome! 👋" # optional default will be site title
+        subtitle: |
+          I am Ayush Saha, a high school student (JEE Aspirant) from West Bengal, India.
+          I enjoy coding, reading, and writing in my free time.
+          The purpose of this website is to share my hobbies and ideas with people around the world. So if you have stumbled upon my website, please feel free to explore and learn more.
+        imageUrl: ayush.png # optional
+        imageTitle: "That's me right there" # optional
+        imageWidth: 180 # custom size
+        imageHeight: 180 # custom size
+        buttons:
+          - name: Programming
+            url: "/programming"
+          - name: Musings
+            url: "/musings"
 
   ShowReadingTime: true
   ShowShareButtons: true
@@ -73,9 +90,26 @@ outputs:
 
 menu:
   main:
+    - name: Programming
+      url: /programming/
+      weight: 1
+
+    - name: Musings
+      url: /musings/
+      weight: 2
+
+    - name: About
+      url: /about/
+      weight: 6
+
     - name: Archive
       url: archives/
-    - name: Tags
-      url: tags/
+      weight: 3
+
     - name: Search
       url: search/
+      weight: 4
+
+    - name: Tags
+      url: tags/
+      weight: 5

@@ -2,7 +2,7 @@
 author: Ayush Saha
 title: "Understanding the Vigenère Cipher"
 cover:
-  image: "/posts/02/vigenere.png"
+  image: "/programming/02/vigenere.png"
 date: 2023-06-02
 summary: "Learn to encrypt or decrypt a Vigenère Cipher"
 tags:
