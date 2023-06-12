@@ -1,4 +1,5 @@
-# crypticcamel.github.io
-Cryptic camel is my personal website dedicated to all things programming.
+# 🌱 My blog
 
-I created this blog as an opportunity to share my hobbby with a broader audience and to practice and improve my programming skills in the process.
+This repository is my personal [blog](https://crypticcamel.github.io/)'s source code where I write about technical topics such as encryption. I also write about other things that come in my mind.
+
+The blog is built with [Hugo](https://gohugo.io/) and [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, and hosted for free on [Github Pages](https://pages.github.com/).
