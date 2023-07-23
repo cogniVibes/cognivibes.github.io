@@ -4,7 +4,7 @@ theme : 'PaperMod'
 paginate: 5
 googleAnalytics: G-9RQG387360
 title : 'cogniVibes'
-description : 'Ayush's Blog'
+description : "Ayush's Blog"
 author : 'Ayush Saha'
 
 params:
