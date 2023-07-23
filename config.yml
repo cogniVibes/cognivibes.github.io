@@ -1,10 +1,10 @@
-baseURL : 'https://crypticcamel.github.io/'
+baseURL : 'https://cognivibes.github.io/'
 languageCode : 'en-us'
 theme : 'PaperMod'
 paginate: 5
 googleAnalytics: G-9RQG387360
-title : 'Cryptic Camel'
-description : 'Blog of Cryptic Camel'
+title : 'cogniVibes'
+description : 'Ayush's Blog'
 author : 'Ayush Saha'
 
 params:
