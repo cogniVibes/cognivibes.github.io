@@ -1,14 +1,19 @@
 .home-info-container {
   display: flex;
   align-items: center;
+  justify-content: start;
 }
 
 .home-info-container img {
   flex: 1;
   flex-shrink: 0;
   height: auto;
-  max-width: 600px;
-  margin-right: 20px;
+  width: 30vw;
+  max-width: 150px;
+  margin-right: 5vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
   border-radius: 20%;
 }
 
