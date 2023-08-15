@@ -22,7 +22,7 @@ Let's create an outward opening spiral grid of numbers using Python. This patter
   align="center"
 >}}
 
-## The Code:
+## The Code
 
 ```python
 def print_spiral_grid(n):
@@ -61,7 +61,7 @@ print_spiral_grid(n)
 
 The code defines a Python function `print_spiral_grid(n)` that generates and prints a spiral grid of numbers from $n^2$ down to 1, following a clockwise pattern. Let's break down the code step by step:
 
-## Initialization:
+## Initialization
 
 ```python
 grid = [[0] * n for _ in range(n)]
@@ -88,7 +88,7 @@ row, col = 0, 0
 
 `direction_index` keeps track of the current direction (initially set to 0 for moving right). `row` and `col` store the current position in the grid.
 
-## Assigning Coordinates:
+## Assigning Coordinates
 
 The loop iterates from 1 to $n^2$, filling the grid in a spiral pattern with decreasing numbers. Here's what happens inside the loop:
 
@@ -118,7 +118,7 @@ else:
 Check if the next position is within bounds of the grid and hasn't been filled already. If both conditions are met, move to the next position. Otherwise, change the direction (clockwise) and update the current position accordingly.
 
 
-## Printing the Grid:
+## Printing the Grid
 
 After filling the grid with the spiral pattern, the code prints the grid using nested loops:
 
@@ -129,7 +129,7 @@ for row in grid:
 
 It iterates through each row in the grid, formatting the numbers to have leading zeros if needed, and printing them with spaces in between.
 
-## Tre Program in Action:
+## Tre Program in Action
 
 Here is sample output that we get upon executing the program.
 
