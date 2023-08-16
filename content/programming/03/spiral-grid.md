@@ -73,7 +73,7 @@ This line initializes a 2D grid (list of lists) with dimensions $n$ by $n$ and f
 num = n * n
 ```
 
-This initializes a variable `num` with the value $n^2$`. This will be used to populate the grid with decreasing numbers in a spiral manner.
+This initializes a variable `num` with the value $n^2$. This will be used to populate the grid with decreasing numbers in a spiral manner.
 
 ```python
 coords = [(0, 1), (1, 0), (0, -1), (-1, 0)]
