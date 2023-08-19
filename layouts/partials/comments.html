@@ -1,23 +1,12 @@
-<script defer src="https://chirpy.dev/bootstrapper.js" data-chirpy-domain="cognivibes.github.io"></script>
-
-<!--
-  The widget follows "system" settings for light/dark mode
-  by default, but you can manually select "light" or "dark"
-  mode for a consistent display
--->
-<div
-  data-chirpy-theme="system"
-  data-chirpy-comment="true"
-  id="chirpy-comment"
-></div>
-
+<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+<link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+<div id="comment-section"></div>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const chirpyDiv = document.getElementById("chirpy-comment");
-        const preferredTheme = localStorage.getItem("pref-theme");
-    
-        if (preferredTheme) {
-            chirpyDiv.setAttribute("data-chirpy-theme", preferredTheme);
-        }
-    });
+initComments({
+  node: document.getElementById("comment-section"),
+  defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+  serverName: "cactus.chat",
+  siteName: "cogniVibes",
+  commentSectionId: "{{ index .Params.tags 0 }}"
+})
 </script>
