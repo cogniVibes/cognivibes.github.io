@@ -250,3 +250,10 @@ Key: 25 | Decrypted message: Qzqyk ue mbbdamotuzs! Eqzp fdaabe uyyqpumfqxk!
 ## Conclusion
 
 Previously, I mentioned that Caesar Cipher is not suitable for serious encryption purposes. This post is intended for beginners who are interested in exploring the field of cryptography and want to enhance their programming skills. While there are numerous encryption methods available, Caesar Cipher is one of the most straightforward to understand. However, I will be posting more content in the future that discusses other types of ciphers in greater depth.
+
+<div
+  data-lyket-type="clap"
+  data-lyket-id="caesar"
+  data-lyket-namespace="blog"
+  data-lyket-template="medium"
+></div>
