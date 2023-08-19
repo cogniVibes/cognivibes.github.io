@@ -43,15 +43,19 @@
     {{- else }}{{ .Content }}{{ end }}
   </div>
   {{- end }}
-
-  <div class="lyket-center">
-    <div
-    data-lyket-type="clap"
-    data-lyket-namespace="blog"
-    data-lyket-id="{{ replace (path.Base .RelPermalink) " /" "-" }}"
-    data-lyket-color-text="currentColor"
-    ></div>
-  </div>
+  
+  {{- if not .Params.noLike }}
+    <div class="lyket-center">
+      <div
+      data-lyket-type="clap"
+      data-lyket-namespace="blog"
+      data-lyket-id="{{ replace (path.Base .RelPermalink) " /" "-" }}"
+      data-lyket-color-text="currentColor"
+      data-lyket-color-icon="currentColor"
+      data-lyket-template="medium"
+      ></div>
+    </div>
+  {{- end }}
 
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}

@@ -69,6 +69,9 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: false
+  editPost:
+      URL: "mailto:ayushsahaaltacc@gmail.com?subject=Suggesting changes to an article. "
+      Text: Suggest Changes
 
   fuseOpts:
     isCaseSensitive: false
