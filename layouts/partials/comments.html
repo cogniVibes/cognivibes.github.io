@@ -9,6 +9,6 @@ initComments({
   defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
   serverName: "cactus.chat",
   siteName: "cogniVibes",
-  commentSectionId: "{{ index .Params 0 }}"
+  commentSectionId: "{{ .Title | urlize }}"
 })
 </script>
