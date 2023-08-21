@@ -1,6 +1,7 @@
 ---
 title: "About"
 url: "/about/"
+author: Ayush Saha
 ShowBreadCrumbs: false
 ShowReadingTime: false
 ShowWordCount: false
