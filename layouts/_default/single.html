@@ -47,12 +47,11 @@
   {{- if not .Params.noLike }}
     <div class="lyket-center">
       <div
-      data-lyket-type="clap"
+      data-lyket-type="like"
       data-lyket-namespace="blog"
       data-lyket-id="{{ replace (path.Base .RelPermalink) " /" "-" }}"
       data-lyket-color-text="currentColor"
       data-lyket-color-icon="currentColor"
-      data-lyket-template="medium"
       ></div>
     </div>
   {{- end }}
