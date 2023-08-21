@@ -1,14 +1,5 @@
 {{- define "main" }}
 
-<style>
-  .lyket-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
-  }
-</style>
-
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
@@ -42,19 +33,6 @@
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
   </div>
-  {{- end }}
-  
-  {{- if not .Params.noLike }}
-    <div class="lyket-center">
-      <div
-      data-lyket-type="like"
-      data-lyket-namespace="blog"
-      data-lyket-id="{{ replace (path.Base .RelPermalink) " /" "-" }}"
-      data-lyket-color-text="currentColor"
-      data-lyket-color-icon="currentColor"
-      data-lyket-color-primary="rgba(62, 120, 183, 0.7)"
-      ></div>
-    </div>
   {{- end }}
 
   <footer class="post-footer">

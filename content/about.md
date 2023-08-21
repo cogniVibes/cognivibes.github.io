@@ -7,7 +7,6 @@ ShowWordCount: false
 disableShare: true
 showtoc: false
 comments: false
-noLike: true
 ---
 
 Hi there! 👋
