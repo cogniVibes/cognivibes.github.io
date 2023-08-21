@@ -29,7 +29,7 @@ params:
   homeInfoParams:
       Title: "[~]$ whoami?"
       image:
-        url: ayush.png
+        url: bb8.png
         title: Ayush
       Content: |
         - cogniVibes is my personal website dedicated to all things programming, with a focus on the fascinating world of cryptography!
