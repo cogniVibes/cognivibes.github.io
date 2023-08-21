@@ -4,16 +4,34 @@
   /* - - - CONFIGURATION VARIABLES - - - */
 
   var __semio__params = {
-    graphcommentId: "vibes", // make sure the id is yours
+    "graphcommentId": "vibes", // make sure the id is yours
 
-    behaviour: {
-       uid: "{{ .Title | urlize }}"
+    "behaviour": {
+       "uid": "{{ .Title | urlize }}"
     },
 
     // configure your variables here
 
-    integration: {
-      theme: document.body.className.includes("dark")? "dark": "light",	
+    "sidePanel": {
+      "width": 480,
+      "button": {
+        "background": "#304251",
+        "color": "#ffffff",
+        "label": "Leave a Comment"
+      },
+      "visible": false,
+      "bubble": {
+        "background": "#304251",
+        "placement": {
+          "bottom": '50px', // Position the bubble 10 pixels below the anchor point
+          "left": '40px',   // Position the bubble 20 pixels to the left of the anchor point
+        }
+
+      }
+    },
+
+    "integration": {
+      "theme": document.body.className.includes("dark")? "dark": "light",	
     },
 
   }
@@ -34,13 +52,13 @@
     graphCommentContainer.innerHTML = "";
 
     // Refresh GraphComment integration
-    __semio__gc_graphlogin(__semio__params);
+    __semio__gc_sidePanel_graphlogin(__semio__params);
   });
 
   /* - - - DON'T EDIT BELOW THIS LINE - - - */
 
   function __semio__onload() {
-    __semio__gc_graphlogin(__semio__params);
+    __semio__gc_sidePanel_graphlogin(__semio__params)
   }
 
   (function() {
@@ -49,7 +67,7 @@
     gc.async = true;
     gc.onload = __semio__onload;
     gc.defer = true;
-    gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+    gc.src = 'https://integration.graphcomment.com/gc_sidePanel_graphlogin.js?' + Date.now();
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
   })();
 </script>
