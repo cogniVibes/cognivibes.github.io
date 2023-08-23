@@ -28,15 +28,3 @@ images.forEach(img => {
     });
 });
 </script>
-
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            localStorage.setItem("pref-theme", 'light');
-            __semio__params.integration.theme = "light";
-        } else {
-            localStorage.setItem("pref-theme", 'dark');
-           __semio__params.integration.theme = "dark";
-        }
-    })
-</script>
