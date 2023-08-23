@@ -12,13 +12,15 @@ tags:
 math: true
 ---
 
+***NB:*** *This post is also available on [DEV Community](https://dev.to/bb8/understanding-the-vigenere-cipher-16g5).*
+
 ## About Vigenère Cipher
 
 The Vigenère cipher is a classic encryption technique that dates back to the 16th century. It was invented by a French diplomat and cryptographer named Blaise de Vigenère, hence the name. It was known as “le chiffre indéchiffrable,” which means “the indecipherable cipher,” and remained unbroken until British polymath Charles Babbage broke it in the 19th century.
 
 ## How it works
 
-The Vigenère cipher is a polyalphabetic substitution cipher that uses a keyword to encrypt and decrypt messages. The key idea behind the Vigenère cipher is to use multiple [Caesar ciphers](https://crypticcamel.github.io/posts/01/caesar-cipher/) based on the letters of the keyword.
+The Vigenère cipher is a polyalphabetic substitution cipher that uses a keyword to encrypt and decrypt messages. The key idea behind the Vigenère cipher is to use multiple [Caesar ciphers](https://cognivibes.github.io/programming/01/caesar-cipher/) based on the letters of the keyword.
 
 Let's say we have a plaintext message $P$ consisting of $n$ letters: $P = p_1, p_2, \ldots, p_n$​. We also have a keyword $K$ consisting of $m$ letters: $K = k_1, k_2, \ldots, k_m$​, where $m \leq n$.
 
@@ -88,7 +90,7 @@ It consists of a grid or matrix that provides a systematic way of encrypting and
 
 ## The Code
 
-The encryption-decryption script as well as the hacking script can be downloaded from [here](https://github.com/crypticCamel/vigenere-cipher).
+The encryption-decryption script as well as the hacking script can be downloaded from [here](https://github.com/cogniVibes/vigenere-cipher).
 
 
 Here is the source code of *encryption_decryption.py*:

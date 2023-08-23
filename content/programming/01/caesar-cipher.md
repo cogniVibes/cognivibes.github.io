@@ -11,6 +11,8 @@ tags:
     - cryptography
 ---
 
+***NB:*** *This post is also available on [DEV Community](https://dev.to/cognivibes/hacking-the-caesar-cipher-3ic1).*
+
 ## Introduction
 
 Cryptography is the practice of secure communication in the presence of third parties. Throughout history, people have used various techniques to protect their messages, ranging from simple substitution ciphers to more advanced encryption methods. Caesar Cipher is a classical encryption method that will be discussed in this post. It is not used much nowadays as it is very easy to crack. However, it fulfils the purpose of teaching and casual encryption where security is not the main concern. 
@@ -86,7 +88,7 @@ Another tool to make it easier to perform encryption or decryption in Caesar cip
 
 ## The Code
 
-I chose the python programming language because it is straightforward and simple to understand. The encryption-decryption script as well as the hacking script can be downloaded from [here](https://github.com/crypticCamel/caesar-cipher) if you do not want to write the code yourself or copy-paste the code. However, if you are a beginner to coding, I suggest you type the code yourself as that will give you a better understanding.
+I chose the python programming language because it is straightforward and simple to understand. The encryption-decryption script as well as the hacking script can be downloaded from [here](https://github.com/cogniVibes/caesar-cipher) if you do not want to write the code yourself or copy-paste the code. However, if you are a beginner to coding, I suggest you type the code yourself as that will give you a better understanding.
 
 ### Encryption and Decryption
 
@@ -250,10 +252,3 @@ Key: 25 | Decrypted message: Qzqyk ue mbbdamotuzs! Eqzp fdaabe uyyqpumfqxk!
 ## Conclusion
 
 Previously, I mentioned that Caesar Cipher is not suitable for serious encryption purposes. This post is intended for beginners who are interested in exploring the field of cryptography and want to enhance their programming skills. While there are numerous encryption methods available, Caesar Cipher is one of the most straightforward to understand. However, I will be posting more content in the future that discusses other types of ciphers in greater depth.
-
-<div
-  data-lyket-type="clap"
-  data-lyket-id="caesar"
-  data-lyket-namespace="blog"
-  data-lyket-template="medium"
-></div>
