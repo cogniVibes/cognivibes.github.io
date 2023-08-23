@@ -35,13 +35,16 @@ params:
         - ***- Ayush Saha***
         -
         - New post every time I upload 😉
-      socialIcons:
-        - name: github
-          url: https://github.com/cogniVibes
-        - name: dev
-          url: https://dev.to/cognivibes
-        - name: rss
-          url: https://cognivibes.github.io/index.xml
+
+  socialIcons:
+    - name: github
+      url: https://github.com/cogniVibes
+    - name: email
+      url: https://cognivibes.github.io/about/#contact-me
+    - name: dev
+      url: https://dev.to/cognivibes
+    - name: rss
+      url: https://cognivibes.github.io/index.xml
 
   # profileMode:
   #       enabled: true
