@@ -12,7 +12,7 @@ tags:
 math: true
 ---
 
-***NB:*** *This post is also available on [DEV Community](https://dev.to/bb8/understanding-the-vigenere-cipher-16g5).*
+***NB:*** *This post is also available on [DEV Community](https://dev.to/cognivibes/understanding-the-vigenere-cipher-16g5).*
 
 ## About Vigenère Cipher
 
@@ -90,7 +90,7 @@ It consists of a grid or matrix that provides a systematic way of encrypting and
 
 ## The Code
 
-The encryption-decryption script as well as the hacking script can be downloaded from [here](https://github.com/cogniVibes/vigenere-cipher).
+The encryption-decryption script can be downloaded from [here](https://github.com/cogniVibes/vigenere-cipher).
 
 
 Here is the source code of *encryption_decryption.py*:
