@@ -2,7 +2,7 @@
 author: Ayush Saha
 title: "Printing an Outward Opening Spiral Grid"
 cover:
-  image: "/programming/03/spiral-grid-cover.png"
+  image: "/dev/03/spiral-grid-cover.png"
 date: 2023-08-15
 summary: "Learn to print an outward opening spiral grid of numbers based on user input."
 tags:
@@ -15,7 +15,7 @@ math: true
 Let's create an outward opening spiral grid of numbers using Python. This pattern involves arranging numbers in a grid format that spirals outwards. We will do this by assigning coordinates to each number.
 
 {{< figure
-  src="/programming/03/spiral-grid.png"
+  src="/dev/03/spiral-grid.png"
   caption="Fig 1. Outward Opening Spiral Grid"
   height="300"
   width="300"

@@ -2,7 +2,7 @@
 author: Ayush Saha
 title: "Hacking the Caesar Cipher"
 cover:
-  image: "/programming/01/caesar.jpg"
+  image: "/dev/01/caesar.jpg"
 date: 2023-05-12
 summary: "Learn to encrypt or decrypt a Caesar Cipher or hack it"
 tags:
@@ -68,7 +68,7 @@ So the plaintext is "HELLO" again.
 To make it easier to perform encryption and decryption, we can create a table that shows the correspondence between the plaintext letters and the ciphertext letters, as well as the numerical values of the letters. Suppose the key is 23 then the encryption table will look like this.
 
 {{< figure
-  src="/programming/01/encryption-table.jpg"
+  src="/dev/01/encryption-table.jpg"
   caption="Fig 1. Encryption Table"
   height="60"
   width="525"
@@ -78,7 +78,7 @@ To make it easier to perform encryption and decryption, we can create a table th
 Another tool to make it easier to perform encryption or decryption in Caesar cipher is the Caesar wheel. The Caesar cipher wheel is a tool used for encryption and decryption in cryptography. It consists of a circular disk with the letters of the alphabet written around its circumference in a specific order. The disk can be rotated to any position, allowing the user to shift the letters a certain number of places to the right or left. To encrypt a message, each letter of the plaintext is replaced with the letter that is a certain number of positions to the right on the wheel. To decrypt the message, the process is reversed by shifting the letters to the left.
 
 {{< figure
-  src="/programming/01/caesar-wheel.jpg"
+  src="/dev/01/caesar-wheel.jpg"
   caption="Fig 2. The Caesar Wheel"
   height="300"
   width="300"

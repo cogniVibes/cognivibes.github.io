@@ -2,7 +2,7 @@
 author: Ayush Saha
 title: "Understanding the Vigenère Cipher"
 cover:
-  image: "/programming/02/vigenere.png"
+  image: "/dev/02/vigenere.png"
 date: 2023-06-02
 summary: "Learn to encrypt or decrypt a Vigenère Cipher"
 tags:
@@ -79,7 +79,7 @@ Thus, the decrypted message is "HELLO".
 Encryption/decryption in case of Vigenere Cipher is a tedious task. The Vigenère table, also known as the Vigenère square or the Tabula Recta, is used to simplify the process of encryption and decryption. 
 
 {{< figure
-  src="/programming/02/vigenere-table.png"
+  src="/dev/02/vigenere-table.png"
   caption="Fig 1. The Vigenère Table"
   height="400"
   width="400"

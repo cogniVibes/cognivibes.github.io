@@ -29,10 +29,10 @@ params:
       Title: "[~]$ whoami?"
       image:
         url: bb8.png
-        title: Ayush
+        title: cogniVibes
       Content: |
-        - cogniVibes is my personal website dedicated to all things programming, with a focus on the fascinating world of cryptography!
-        - ***- Ayush Saha***
+        - cogniVibes my personal corner of the web. Here, I share my thoughts on a diverse range of topics, from the digital realm to the cinematic universe and everything in between. 
+        - Ayush Saha
         -
         - New post every time I upload 😉
 
@@ -73,7 +73,7 @@ params:
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: true
+  # comments: true
   hidemeta: false
   hideSummary: false
   showtoc: true
@@ -103,8 +103,8 @@ outputs:
 
 menu:
   main:
-    - name: Programming
-      url: /programming/
+    - name: Dev
+      url: /dev/
       weight: 1
 
     - name: Musings
@@ -126,3 +126,6 @@ menu:
     - name: Tags
       url: tags/
       weight: 5
+
+    - name: Newsletter
+      url: https://tinyletter.com/cogniVibes
