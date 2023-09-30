@@ -1,0 +1,18 @@
+{{- define "main" }}
+<script>
+  // Get the current URL
+  var currentURL = window.location.href;
+
+  // Check if the URL matches the old /programming/ structure
+  if (currentURL.startsWith("https://cognivibes.github.io/programming/")) {
+    // Extract the article name from the old URL
+    var articleName = currentURL.replace("https://cognivibes.github.io/programming/", "");
+
+    // Redirect to the new /dev/ URL structure
+    window.location.href = "https://cognivibes.github.io/dev/" + articleName;
+  } else {
+    // Display the 404 message
+    document.body.innerHTML = "<div class='not-found'>404 - Page Not Found</div>";
+  }
+</script>
+{{- end }}{{/* end main */ -}}
