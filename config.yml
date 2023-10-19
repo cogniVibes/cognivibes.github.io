@@ -9,8 +9,8 @@ author : 'Ayush Saha'
 params:
 
   label:
-    text: "@cogniVibes"
-    icon: cognivibes.jpg
+    text: "cogniVibes"
+    icon: cognivibes.png
   env: production  
   assets:
       favicon: "favicon.ico"
@@ -28,7 +28,7 @@ params:
   homeInfoParams:
       Title: "[~]$ whoami?"
       image:
-        url: bb8.png
+        url: gb.png
         title: cogniVibes
       Content: |
         - cogniVibes my personal corner of the web. Here, I share my thoughts on a diverse range of topics, from the digital realm to the cinematic universe and everything in between. 

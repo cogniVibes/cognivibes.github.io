@@ -129,7 +129,7 @@ for row in grid:
 
 It iterates through each row in the grid, formatting the numbers to have leading zeros if needed, and printing them with spaces in between.
 
-## Tre Program in Action
+## The Program in Action
 
 Here is sample output that we get upon executing the program.
 
