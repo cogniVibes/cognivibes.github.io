@@ -2,7 +2,7 @@
 author: Ayush Saha
 title: "Understanding the Vigenère Cipher"
 cover:
-  image: "/dev/02/vigenere.png"
+  image: "/dev/02/vigenere-cipher-cover.png"
 date: 2023-06-02
 summary: "Learn to encrypt or decrypt a Vigenère Cipher"
 tags:
@@ -40,7 +40,9 @@ The mathematical representation of the decryption process is given by:
 $$D_i = (Ei−kj) \mod 26$$
 where $D_i$​ is the $i$-th letter of the decrypted message and $j = (i−1) \mod m$.
 
-Note that in these equations, we use modular arithmetic with $26$ since there are $26$ letters in the English alphabet. Additionally, we assume a simple mapping where $A$ is represented by $0$, $B$ by $1$, and so on.
+{{<notice
+    text="**Note:** In these equations, we use modular arithmetic with $26$ since there are $26$ letters in the English alphabet. Additionally, we assume a simple mapping where $A$ is represented by $0$, $B$ by $1$, and so on."
+>}}
 
 ### Example
 
@@ -182,4 +184,6 @@ Here the key used is *Moonlight*.
 
 There are several ways to hack the Vigenère Cipher, such as Kasiski examination, Friedman test, frequency analysis, dictionary attack, etc. However, these are advanced methods and require complex application of combinatorics and statistics. Discussing even one of those would require a separate post. For now we will focus on encryption and decryption. I will surely post a Vigenère hack tutorial in future.
 
-**Note:** Vigenère Cipher, although complex, is still too easy to break using modern methods and should not be used for serious encryption purposes.
+{{<notice
+    text="**Note:** Vigenère Cipher, although complex, is still too easy to break using modern methods and should not be used for serious encryption purposes."
+>}}
