@@ -1,0 +1,47 @@
+{{ $text := .Get "text" | markdownify }}
+
+<script>
+    // Retrieve the stored theme preference on page load
+    document.addEventListener("DOMContentLoaded", () => {
+        const themePreference = localStorage.getItem("pref-theme");
+        if (themePreference === 'light') {
+            applyTheme('light');
+        } else {
+            applyTheme('dark');
+        }
+    });
+
+    // Function to apply theme based on the class
+    function applyTheme(theme) {
+        const noticeBoxes = document.querySelectorAll(".notice");
+        noticeBoxes.forEach(box => {
+            if (theme === 'light') {
+                box.style.backgroundColor = "#cadee4";
+                box.style.color = "#2e2e33";
+            } else {
+                box.style.backgroundColor = "#1d3845";
+                box.style.color = "#cfcfef";
+            }
+        });
+        localStorage.setItem("pref-theme", theme);
+    }
+
+    // Theme toggle function
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const currentTheme = localStorage.getItem("pref-theme");
+        if (currentTheme === 'light') {
+            applyTheme('dark');
+        } else {
+            applyTheme('light');
+        }
+        localStorage.setItem("pref-theme", currentTheme);
+    });
+</script>
+
+<div class="notice" style='border-left: solid #1e6cf7 4px; border-radius: 4px; padding: 0.7em;'>
+    {{ with $text }}
+        <p style='margin-left: 1em; margin-top: 0; margin-bottom: 0;'>
+            {{ . | safeHTML }}
+        </p>
+    {{ end }}
+</div>
