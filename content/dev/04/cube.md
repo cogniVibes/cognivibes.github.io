@@ -114,7 +114,7 @@ This is what we will see if we run the program:
 
 {{< figure
   src="/dev/04/cube-no-edge.gif"
-  caption="Fig 2. The cube in its current state "
+  caption="Fig 1. The cube in its current state "
   height="400"
   width="400"
   align="center"
