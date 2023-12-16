@@ -78,7 +78,7 @@ D_5 = (18 - 4) \mod 26 = 14 \rightarrow O$$
 Thus, the decrypted message is "HELLO".
 
 ### Vigenère Table
-Encryption/decryption in case of Vigenere Cipher is a tedious task. The Vigenère table, also known as the Vigenère square or the Tabula Recta, is used to simplify the process of encryption and decryption. 
+Encryption/decryption in case of Vigenère Cipher is a tedious task. The Vigenère table, also known as the Vigenère square or the Tabula Recta, is used to simplify the process of encryption and decryption. 
 
 {{< figure
   src="/dev/02/vigenere-table.png"

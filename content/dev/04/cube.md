@@ -22,7 +22,7 @@ There is however a problem, we are about to print a 3D object on a 2D plane. But
 
 How do we create a 3D cube?
 
-We are going to use the 3D co-ordinate system and start by assiging co-ordinates to the vertices of the cube.
+We are going to use the 3D co-ordinate system and start by assigning co-ordinates to the vertices of the cube.
 
 How do we rotate the cube?
 
@@ -44,7 +44,7 @@ xm = 2*ym  # X magnification
 
 Let's understand what we did here:
 
-Here, `w` and `h` represent the width and height of the terminal. This determines the size of the cube. `out` is used to write to the terminal. `cube` is a list of coordinates representing the vertices of the cube. `s` and `c` represent the sine and cosine of a rotation angle. Notice we did not choose any angle $\theta$ because we need to deal with the sine and cosine of the angle of rotation and the angle itself is not of much use. The range of the sine function is [-1, 1]. A negative value of sine will make the cube rotate in the opposite direction. We assigned the value of `s` 0.1. This is because our cube rotates by a very small angle per frame. The greater the value, the less smooth the rotation becomes, as the points (vertices) undergo more significant position updates. We don't need $\theta$ to calculate the cosine. Instead, we calculated the value of cosine using the basic trignometric identity: 
+Here, `w` and `h` represent the width and height of the terminal. This determines the size of the cube. `out` is used to write to the terminal. `cube` is a list of coordinates representing the vertices of the cube. `s` and `c` represent the sine and cosine of a rotation angle. Notice we did not choose any angle $\theta$ because we need to deal with the sine and cosine of the angle of rotation and the angle itself is not of much use. The range of the sine function is [-1, 1]. A negative value of sine will make the cube rotate in the opposite direction. We assigned the value of `s` 0.1. This is because our cube rotates by a very small angle per frame. The greater the value, the less smooth the rotation becomes, as the points (vertices) undergo more significant position updates. We don't need $\theta$ to calculate the cosine. Instead, we calculated the value of cosine using the basic trigonometric identity: 
 
 $$\sin^{2}\theta + \cos^{2}\theta = 1$$
 
@@ -171,7 +171,7 @@ Upon running the code now we will see the cube along with its edges.
 
 ## The Complete Code
 
-Here is the final code. I recommend you experiment with it by changing the values in equations and variable initialisation to better understand the funcction of each of them.
+Here is the final code. I recommend you experiment with it by changing the values in equations and variable initialization to better understand the function of each of them.
 
 ```python
 import sys, time
