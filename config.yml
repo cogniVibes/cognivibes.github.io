@@ -75,7 +75,7 @@ params:
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  # comments: true
+  comments: true
   hidemeta: false
   hideSummary: false
   showtoc: true
@@ -83,6 +83,10 @@ params:
   editPost:
       URL: "mailto:ayushsahaaltacc@gmail.com?subject=Suggesting changes to an article. "
       Text: Suggest Changes
+
+  services:
+    disqus:
+      shortname: your-disqus-shortname
 
   fuseOpts:
     isCaseSensitive: false
