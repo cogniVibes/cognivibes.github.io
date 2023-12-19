@@ -35,10 +35,6 @@
   </div>
   {{- end }}
 
-  {{- if (.Param "comments") }}
-  {{- partial "disqus.html" . }}
-  {{- end }}
-
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
@@ -54,6 +50,9 @@
     {{- end }}
   </footer>
 
+  {{- if (.Param "comments") }}
+  {{- partial "disqus.html" . }}
+  {{- end }}
 </article>
 
 {{- end }}{{/* end main */}}
