@@ -20,5 +20,11 @@
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
+
+    document.addEventListener('themeChanged', function (e) { 
+        if (document.readyState == 'complete') {
+        DISQUS.reset({ reload: true, config: disqus_config });
+        }
+     });
 </script>
 <noscript>Please enable JavaScript to view the comments.</a></noscript>
