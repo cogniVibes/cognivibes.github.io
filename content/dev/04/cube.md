@@ -53,7 +53,7 @@ $$\sin^{2}\theta + \cos^{2}\theta = 1$$
 ## Rotation
 
 The core of this project is rotating the cube in 3D space. We use the following equations to perform the rotation[^1]
-[^1]: [Learn more about rotation of axes](https://math.sci.ccny.cuny.edu/document/Rotation+of+Axes)
+[^1]: [Learn more about rotation of axes (pdf)](https://math.sci.ccny.cuny.edu/document/Rotation+of+Axes)
 
 $$x' = c \cdot x + s \cdot z \\\
 y' = y \\\
