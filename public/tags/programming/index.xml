@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Programming on cogniVibes</title>
+    <link>http://localhost:1313/tags/programming/</link>
+    <description>Recent content in Programming on cogniVibes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rendering a Rotating 3D ASCII cube</title>
+      <link>http://localhost:1313/dev/04/cube/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/04/cube/</guid>
+      <description>Learn to render a rotating 3D cube in the terminal.</description>
+    </item>
+    <item>
+      <title>Printing an Outward Opening Spiral Grid</title>
+      <link>http://localhost:1313/dev/03/spiral-grid/</link>
+      <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/03/spiral-grid/</guid>
+      <description>Learn to print an outward opening spiral grid of numbers based on user input.</description>
+    </item>
+    <item>
+      <title>Understanding the Vigenère Cipher</title>
+      <link>http://localhost:1313/dev/02/vigenere-cipher/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/02/vigenere-cipher/</guid>
+      <description>Learn to encrypt or decrypt a Vigenère Cipher</description>
+    </item>
+    <item>
+      <title>Hacking the Caesar Cipher</title>
+      <link>http://localhost:1313/dev/01/caesar-cipher/</link>
+      <pubDate>Fri, 12 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/01/caesar-cipher/</guid>
+      <description>Learn to encrypt or decrypt a Caesar Cipher or hack it</description>
+    </item>
+  </channel>
+</rss>

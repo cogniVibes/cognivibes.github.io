@@ -9,6 +9,7 @@ tags:
     - python
     - programming
     - cryptography
+lineos: true
 ---
 
 ***NB:*** *This post is also available on [DEV Community](https://dev.to/cognivibes/hacking-the-caesar-cipher-3ic1).*

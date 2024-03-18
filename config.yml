@@ -11,7 +11,6 @@ params:
   label:
     text: "cogniVibes"
     icon: cognivibes.png
-  env: production  
   assets:
       favicon: "favicon.ico"
       favicon16x16: "favicon-16x16.png"
@@ -30,6 +29,7 @@ params:
       image:
         url: gb.png
         title: cogniVibes
+      AlignSocialIconsTo: left
       Content: |
         - cogniVibes is my personal corner of the web. Here, I share my thoughts on a diverse range of topics, from the digital realm to the cinematic universe and everything in between. 
         - ***- Ayush Saha***
