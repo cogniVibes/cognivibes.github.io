@@ -24,7 +24,7 @@ Let's create an outward opening spiral grid of numbers using Python. This patter
 
 ## The Code
 
-```python
+```python {linenos = true}
 def print_spiral_grid(n):
     # Initialize the grid with zeros
     grid = [[0] * n for _ in range(n)]

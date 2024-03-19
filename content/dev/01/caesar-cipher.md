@@ -9,7 +9,6 @@ tags:
     - python
     - programming
     - cryptography
-lineos: true
 ---
 
 ***NB:*** *This post is also available on [DEV Community](https://dev.to/cognivibes/hacking-the-caesar-cipher-3ic1).*
@@ -95,7 +94,7 @@ I chose the python programming language because it is straightforward and simple
 
 Here is the source code for *encryption_decription.py*
 
-```python
+```python {linenos = true}
 # This code will encrypt or decrypt a Caesar Cipher
 # Core encryption/decryption function
 def caesar_cipher(text, shift, mode):
@@ -197,7 +196,7 @@ However, brute force can be effective against the Caesar cipher because the Caes
 Unfortunately, brute force technique isn’t sophisticated enough to identify when it has found the correct key. It relies on a human to read the output and identify which decryption produced the original English message.
 
 Here is the hack script named *decipher.py*:
-```python
+```python {linenos = true}
 # This code will decipher a Caesar Cipher
 
 # Get cipher text

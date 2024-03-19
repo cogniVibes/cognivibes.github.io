@@ -30,7 +30,7 @@ We will choose an angle $\theta$ and use $\sin\theta$ and $cos\theta$ to update 
 
 Let's start with the initial setup. We define some variables and parameters:
 
-```python
+```python {linenos = true}
 import sys, time
 
 w, h, out = 80, 24, sys.stdout
@@ -103,7 +103,7 @@ proj = [(round(w/2+xm*x/(z+2)), round(h/2+ym*y/(z+2))) for x, y, z in cube]
 Finally, we draw the cube on the terminal screen. We iterate through the terminal's rows and columns and check if the current pixel coordinates are in the `proj` list. If they are, we draw an asterisk ('*'); otherwise, we leave it empty (' ').
 The entire process is wrapped in an animation loop where the cube is rotated and redrawn continuously. A small delay `time.sleep(1/15.0)` is added to control the animation speed.
 
-```python
+```python {linenos = true}
 out.write('\033[H' + '\n'.join(
         ''.join(('*' if (x, y) in proj else ' ') for x in range(w))
         for y in range(h)))
@@ -125,7 +125,7 @@ This is what we will see if we run the program:
 
 We define a list of all edges. 
 
-```python
+```python {linenos = true}
 # Previous code
 ym = h/3  # Y magnification
 xm = 2*ym  # X magnification
@@ -142,7 +142,7 @@ Each edge will have a start and an end point. The indices within each tuple pair
 
 Then we draw the edges.
 
-```python
+```python {linenos = true}
 # Previous code
 cube = [(c*x + s*z, y, -s*x + c*z) for x, y, z in cube]  # Rotate around the Y-axis
 proj = [(round(w/2+xm*x/(z+2)), round(h/2+ym*y/(z+2))) for x, y, z in cube]
@@ -173,7 +173,7 @@ Upon running the code now we will see the cube along with its edges.
 
 Here is the final code. I recommend you experiment with it by changing the values in equations and variable initialization to better understand the function of each of them.
 
-```python
+```python {linenos = true}
 import sys, time
 
 w, h, out = 80, 24, sys.stdout

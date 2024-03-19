@@ -122,8 +122,6 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <ul class="lang-switch"><li>|</li>
-                </ul>
             </div>
         </div>
 
@@ -178,7 +176,7 @@
       Rendering a Rotating 3D ASCII cube
     </h1>
     <div class="post-meta">
-<span title='2023-12-15 00:00:00 +0000 UTC'>December 15, 2023</span>&nbsp;·&nbsp;17 min&nbsp;·&nbsp;1616 words&nbsp;·&nbsp;Ayush Saha&nbsp;|&nbsp;<a href="mailto:ayushsahaaltacc@gmail.com?subject=Suggesting%20changes%20to%20an%20article.%20" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+<span title='2023-12-15 00:00:00 +0000 UTC'>December 15, 2023</span>&nbsp;·&nbsp;17 min&nbsp;·&nbsp;1687 words&nbsp;·&nbsp;Ayush Saha&nbsp;|&nbsp;<a href="mailto:ayushsahaaltacc@gmail.com?subject=Suggesting%20changes%20to%20an%20article.%20" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
 
 </div>
   </header> 
@@ -213,7 +211,20 @@
 <p>How do we rotate the cube?</p>
 <p>We will choose an angle $\theta$ and use $\sin\theta$ and $cos\theta$ to update the position of the vertices.</p>
 <p>Let&rsquo;s start with the initial setup. We define some variables and parameters:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys<span style="color:#f92672">,</span> time
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys<span style="color:#f92672">,</span> time
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>w, h, out <span style="color:#f92672">=</span> <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">24</span>, sys<span style="color:#f92672">.</span>stdout
 </span></span><span style="display:flex;"><span>cube <span style="color:#f92672">=</span> [(x, y, z) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">for</span> z <span style="color:#f92672">in</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)]
@@ -222,7 +233,9 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>ym <span style="color:#f92672">=</span> h<span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>  <span style="color:#75715e"># Y magnification</span>
 </span></span><span style="display:flex;"><span>xm <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>ym  <span style="color:#75715e"># X magnification</span>
-</span></span></code></pre></div><p>Let&rsquo;s understand what we did here:</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Let&rsquo;s understand what we did here:</p>
 <p>Here, <code>w</code> and <code>h</code> represent the width and height of the terminal. This determines the size of the cube. <code>out</code> is used to write to the terminal. <code>cube</code> is a list of coordinates representing the vertices of the cube. <code>s</code> and <code>c</code> represent the sine and cosine of a rotation angle. Notice we did not choose any angle $\theta$ because we need to deal with the sine and cosine of the angle of rotation and the angle itself is not of much use. The range of the sine function is [-1, 1]. A negative value of sine will make the cube rotate in the opposite direction. We assigned the value of <code>s</code> 0.1. This is because our cube rotates by a very small angle per frame. The greater the value, the less smooth the rotation becomes, as the points (vertices) undergo more significant position updates. We don&rsquo;t need $\theta$ to calculate the cosine. Instead, we calculated the value of cosine using the basic trigonometric identity:</p>
 <p>$$\sin^{2}\theta + \cos^{2}\theta = 1$$</p>
 <p><code>ym</code> and <code>xm</code> are magnification factors for the Y and X axes, respectively. I will explain the role of <code>ym</code> and <code>xm</code> shortly when we project the cube into a 2D plane.</p>
@@ -297,12 +310,23 @@ z&rsquo; = -s \cdot x + c \cdot z$$</p>
 </span></span></code></pre></div><h2 id="rendering-the-cube">Rendering the Cube<a hidden class="anchor" aria-hidden="true" href="#rendering-the-cube">#</a></h2>
 <p>Finally, we draw the cube on the terminal screen. We iterate through the terminal&rsquo;s rows and columns and check if the current pixel coordinates are in the <code>proj</code> list. If they are, we draw an asterisk (&rsquo;*&rsquo;); otherwise, we leave it empty (&rsquo; &lsquo;).
 The entire process is wrapped in an animation loop where the cube is rotated and redrawn continuously. A small delay <code>time.sleep(1/15.0)</code> is added to control the animation speed.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>out<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\033</span><span style="color:#e6db74">[H&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>join(
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>out<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\033</span><span style="color:#e6db74">[H&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>join(
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join((<span style="color:#e6db74">&#39;*&#39;</span> <span style="color:#66d9ef">if</span> (x, y) <span style="color:#f92672">in</span> proj <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39; &#39;</span>) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(w))
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> range(h)))
 </span></span><span style="display:flex;"><span>out<span style="color:#f92672">.</span>flush()
 </span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">15.0</span>)
-</span></span></code></pre></div><p>This is what we will see if we run the program:</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This is what we will see if we run the program:</p>
 <figure class="align-center ">
     <img loading="lazy" src="/dev/04/cube-no-edge.gif#center"
          alt="Fig 1. The cube in its current state" width="400" height="400"/> <figcaption>
@@ -312,7 +336,21 @@ The entire process is wrapped in an animation loop where the cube is rotated and
 
 <h2 id="adding-edges">Adding Edges<a hidden class="anchor" aria-hidden="true" href="#adding-edges">#</a></h2>
 <p>We define a list of all edges.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Previous code</span>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Previous code</span>
 </span></span><span style="display:flex;"><span>ym <span style="color:#f92672">=</span> h<span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>  <span style="color:#75715e"># Y magnification</span>
 </span></span><span style="display:flex;"><span>xm <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>ym  <span style="color:#75715e"># X magnification</span>
 </span></span><span style="display:flex;"><span>
@@ -322,9 +360,27 @@ The entire process is wrapped in an animation loop where the cube is rotated and
 </span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">4</span>),  <span style="color:#75715e"># Top square</span>
 </span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>)   <span style="color:#75715e"># Connecting edges</span>
 </span></span><span style="display:flex;"><span>]
-</span></span></code></pre></div><p>Each edge will have a start and an end point. The indices within each tuple pair correspond to the indices of the vertices within the cube list. For example, (0, 1) represents an edge connecting the vertices at indices 0 and 1 in the cube list, and so on.</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Each edge will have a start and an end point. The indices within each tuple pair correspond to the indices of the vertices within the cube list. For example, (0, 1) represents an edge connecting the vertices at indices 0 and 1 in the cube list, and so on.</p>
 <p>Then we draw the edges.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Previous code</span>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Previous code</span>
 </span></span><span style="display:flex;"><span>cube <span style="color:#f92672">=</span> [(c<span style="color:#f92672">*</span>x <span style="color:#f92672">+</span> s<span style="color:#f92672">*</span>z, y, <span style="color:#f92672">-</span>s<span style="color:#f92672">*</span>x <span style="color:#f92672">+</span> c<span style="color:#f92672">*</span>z) <span style="color:#66d9ef">for</span> x, y, z <span style="color:#f92672">in</span> cube]  <span style="color:#75715e"># Rotate around the Y-axis</span>
 </span></span><span style="display:flex;"><span>proj <span style="color:#f92672">=</span> [(round(w<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>xm<span style="color:#f92672">*</span>x<span style="color:#f92672">/</span>(z<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>)), round(h<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>ym<span style="color:#f92672">*</span>y<span style="color:#f92672">/</span>(z<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>))) <span style="color:#66d9ef">for</span> x, y, z <span style="color:#f92672">in</span> cube]
 </span></span><span style="display:flex;"><span>
@@ -336,7 +392,9 @@ The entire process is wrapped in an animation loop where the cube is rotated and
 </span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> start[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> i <span style="color:#f92672">*</span> (end[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">-</span> start[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">//</span> <span style="color:#ae81ff">10</span>
 </span></span><span style="display:flex;"><span>        y <span style="color:#f92672">=</span> start[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> i <span style="color:#f92672">*</span> (end[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> start[<span style="color:#ae81ff">1</span>]) <span style="color:#f92672">//</span> <span style="color:#ae81ff">10</span>
 </span></span><span style="display:flex;"><span>        proj<span style="color:#f92672">.</span>append((x, y))
-</span></span></code></pre></div><p>This code segment operates within a loop iterating through each edge of the cube. <code>edge</code> iterates through each pair of vertices that make up an edge of the cube. <code>start</code> and <code>end</code> represent the projected 2D coordinates (x, y) of the vertices that form the current edge. A loop from <code>i=1</code> to <code>i=8</code> (inclusive) is used for interpolation to create smoother lines. This loop divides the line segment between <code>start</code> and <code>end</code> into 8 equal parts. For each value of <code>i</code>, it calculates new intermediate coordinates <code>(x, y)</code> between <code>start</code> and <code>end</code>. This is done by using linear interpolation formula: <code>x = start[0] + i * (end[0] - start[0]) // 10</code> and <code>y = start[1] + i * (end[1] - start[1]) // 10</code>. This formula divides the line segment into 10 equal parts (<code>// 10</code>) and calculates intermediate points. The newly calculated coordinates <code>(x, y)</code> are appended to the <code>proj</code> list. This expands <code>proj</code> by adding more points that lie along the edges, resulting in a smoother representation of the cube when it&rsquo;s projected onto the 2D screen.</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This code segment operates within a loop iterating through each edge of the cube. <code>edge</code> iterates through each pair of vertices that make up an edge of the cube. <code>start</code> and <code>end</code> represent the projected 2D coordinates (x, y) of the vertices that form the current edge. A loop from <code>i=1</code> to <code>i=8</code> (inclusive) is used for interpolation to create smoother lines. This loop divides the line segment between <code>start</code> and <code>end</code> into 8 equal parts. For each value of <code>i</code>, it calculates new intermediate coordinates <code>(x, y)</code> between <code>start</code> and <code>end</code>. This is done by using linear interpolation formula: <code>x = start[0] + i * (end[0] - start[0]) // 10</code> and <code>y = start[1] + i * (end[1] - start[1]) // 10</code>. This formula divides the line segment into 10 equal parts (<code>// 10</code>) and calculates intermediate points. The newly calculated coordinates <code>(x, y)</code> are appended to the <code>proj</code> list. This expands <code>proj</code> by adding more points that lie along the edges, resulting in a smoother representation of the cube when it&rsquo;s projected onto the 2D screen.</p>
 <p>Upon running the code now we will see the cube along with its edges.</p>
 <figure class="align-center ">
     <img loading="lazy" src="/dev/04/cube.gif#center"
@@ -347,7 +405,46 @@ The entire process is wrapped in an animation loop where the cube is rotated and
 
 <h2 id="the-complete-code">The Complete Code<a hidden class="anchor" aria-hidden="true" href="#the-complete-code">#</a></h2>
 <p>Here is the final code. I recommend you experiment with it by changing the values in equations and variable initialization to better understand the function of each of them.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys<span style="color:#f92672">,</span> time
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys<span style="color:#f92672">,</span> time
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>w, h, out <span style="color:#f92672">=</span> <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">24</span>, sys<span style="color:#f92672">.</span>stdout
 </span></span><span style="display:flex;"><span>cube <span style="color:#f92672">=</span> [(x, y, z) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">for</span> z <span style="color:#f92672">in</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)]
@@ -382,7 +479,9 @@ The entire process is wrapped in an animation loop where the cube is rotated and
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> range(h)))
 </span></span><span style="display:flex;"><span>    out<span style="color:#f92672">.</span>flush()
 </span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">15.0</span>)
-</span></span></code></pre></div><div class="footnotes" role="doc-endnotes">
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">

@@ -47,12 +47,5 @@ Welcome to my blog and thank you for taking the time to visit.
 I created this blog as an opportunity to share my hobby with a broader audience and to practice and improve my programming skills in the process.
 As you read through my articles, my hope is that you&amp;rsquo;ll gain new insights and perspectives on the topics I write about.</description>
     </item>
-    <item>
-      <title>Tags</title>
-      <link>http://localhost:1313/tags/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/</guid>
-      <description>tags</description>
-    </item>
   </channel>
 </rss>

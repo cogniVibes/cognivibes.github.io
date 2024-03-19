@@ -97,7 +97,7 @@ The encryption-decryption script can be downloaded from [here](https://github.co
 
 Here is the source code of *encryption_decryption.py*:
 
-```python
+```python {linenos = true}
 def vigenere_cipher(text, keyword, mode):
     result = ""
     keyword_length = len(keyword)
